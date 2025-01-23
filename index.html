@@ -6,13 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/output.css" />
   </head>
-  <body>
+  <body
+    class="bg-gradient-to-br from-yellow-300 to-blue-400 bg-no-repeat h-screen"
+  >
     <div class="container mx-auto p-4 flex flex-col gap-4">
       <div class="flex items-center mb-4">
         <input
           type="text"
           id="cityInput"
-          class="border outline-none border-gray-300 rounded-md px-4 py-2 w-full mr-2"
+          class="border outline-none border-gray-500 rounded-md px-4 py-2 w-full mr-2"
           placeholder="Enter City"
         />
         <button
@@ -23,27 +25,31 @@
         </button>
       </div>
 
-      <div class="boxOfWeather hidden bg-white p-4 rounded-md shadow-md">
-        <h1 class="text-3xl font-bold mb-4 max-[600px]:text-[18px]" id="cityHeader">
-          Weather in <span class="city"></span>
-        </h1>
-
-        <div class="flex items-center">
-          <div
-            class="w-16 h-16 rounded-full  flex justify-center items-center mr-4"
+      <div
+        class="boxOfWeather hidden p-6 w-full max-w-md bg-white/20 backdrop-blur-md rounded-lg mx-auto shadow-lg text-center text-white "
+      >
+        <div>
+          <h1
+            class="text-3xl font-bold mb-4 max-[600px]:text-[18px]"
+            id="cityHeader"
           >
-            <img class="weatherIMG" src="" alt="" />
-          </div>
-          <div>
-            <h2 class="text-lg font-semibold max-[600px]:text-[16px]">
-              Current Temperature: <span id="temperature">--</span>°F
-            </h2>
-            <p class="text-gray-500">
-              Feels like: <span id="feelsLike">--</span>°F
-            </p>
-            <p class="text-gray-500">
-              Condition: <span id="condition">--</span>
-            </p>
+            Weather in <span class="city"></span>
+          </h1>
+          <h2 class="text-lg font-semibold max-[600px]:text-[16px]">
+            Current Temperature: <span id="temperature">--</span>°C
+          </h2>
+        </div>
+        <div class="flex flex-col mx-auto pt-4">
+          <div class="flex justify-center items-center gap-5 max-[306px]:flex-col">
+            <div class=" ">
+              <img class="weatherIMG h-16 w-16 rounded-full" src="" alt="" />
+            </div>
+            <div class="flex flex-col gap-2 text-white">
+              <p class="text-lg">
+                Feels like: <span id="feelsLike">--</span>°C
+              </p>
+              <p class="text-lg">Condition: <span id="condition">--</span></p>
+            </div>
           </div>
         </div>
 
@@ -54,8 +60,57 @@
       </div>
     </div>
 
+    <!-- <div class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-yellow-300 to-blue-400">
+        <div class="w-full max-w-md text-center">
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Search for a city..."
+            class="w-full px-4 py-2 text-gray-800 bg-white border-none rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-300"
+          />
+          <button
+            id="searchButton"
+            class="w-full mt-3 px-4 py-2 font-semibold text-white bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+          >
+            Search
+          </button>
+        </div>
       
-
+        <div
+          class="mt-8 p-6 w-full max-w-md bg-white/20 backdrop-blur-md rounded-lg shadow-lg text-center text-white boxOfWeather hidden"
+        >
+          <h2 class="text-3xl font-semibold city">Tashkent, UZ</h2>
+          <p class="text-md text-gray-200 ">Clear sky</p>
+          <div class="mt-4">
+            <img src="" class="weatherIMG" alt="">
+            <p class="text-6xl font-bold "><span id="temperature"></span> °C</p>
+            <div class="mt-4 flex justify-around text-sm">
+              <div>
+                <p>Feels Like</p>
+                <p class="font-semibold feelsLike">-7°C</p>
+              </div>
+              <div>
+                <p>Min Temp</p>
+                <p class="font-semibold " id="temperature">-3°C</p>
+              </div>
+            </div>
+            <div class="mt-4 flex justify-around text-sm">
+              <div>
+                <p>Humidity</p>
+                <p class="font-semibold " id="humidity">46%</p>
+              </div>
+            </div>
+            <div class="mt-6 text-left text-sm">
+           
+             
+              <p class="mb-2">Wind Speed:
+                <span id="windSpeed">3.09 m/s</span > 
+              </p>
+            
+            </div>
+          </div>
+        </div>
+      </div> -->
     <script src="./main.js"></script>
   </body>
 </html>
